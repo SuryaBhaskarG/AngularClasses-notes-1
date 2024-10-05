@@ -1,0 +1,89 @@
+<!-- String interpolation-->
+<h3>{{title}}</h3> 
+<br>
+<!-- Property Binding-->
+ <img [src]="'https://via.placeholder.com/150'" alt=" file">
+ <br>
+ <button [disabled]="IsDisabled">Click me</button>
+ <br>
+  <!-- class Binding-->
+<button [class.active]="isActive">Click me</button>
+<br>
+ <!-- Event Binding-->
+  <button (click)="OnClick()">Click me</button> 
+ <h5>{{message}}</h5> 
+
+ <!-- Style Binding-->
+<div [style.color]="isHighlighted?'yellow':'blue'" [style.color]="isHighlighted?'yellow':'red'">surya</div>
+<br>
+<!-- Attribute Binding Binding-->
+
+<img [attr.src]="imageUrl" [attr.alt]="">
+
+<!--Two way Binding-->
+<input type="text" [(ngModel)]="username" placeholder="enter user name">
+
+<h2>Welcome {{username}}</h2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Structural directives</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div *ngIf="isActive1">
+  <h2>hello surya! xyz</h2>
+</div>
+<br>
+<br>
+<!-- new approach-->
+@if (isActive1) 
+{
+  <h2>hello surya! xyz</h2>
+}
+@else if (!isActive1) {
+  <h2>hello world!</h2>
+}
+@else {
+  <h2>hello world!</h2>
+}
+
+<br>
+<br>
+<ol type="a">
+  <li *ngFor="let item of items">{{ item }}</li>
+</ol>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">This is red color.</div>
+  <div *ngSwitchCase="'green'">This is green color.</div>
+  <div *ngSwitchCase="'blue'">This is blue color.</div>
+  <div *ngSwitchDefault>This is default color.</div>
+</div>
+
+
+<!------ -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div *ngFor="let item of [1,2,3,4,5,6]">
+  <h2>array1{{item}}</h2>
+</div>
+<br>
+
+<ng-container *ngFor="let item of [1,2,3,4,5,6]">
+          <h2>array2 : {{item}}</h2>
+</ng-container>
+

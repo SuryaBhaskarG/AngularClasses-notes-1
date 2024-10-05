@@ -1,0 +1,79 @@
+<div class="container">
+  
+ <br>
+ <div>
+  <form  #f='ngForm' (submit)="onSubmit(f)">
+    <h2>Job Application Registration Form</h2> 
+    <br>
+  <label>First Name:</label>
+  <input type="text" placeholder="First Name" ngModel name="firstName" >
+  <br><br>
+  <label>Last Name:</label>
+  <input type="text" placeholder="last name" ngModel name="lastName">
+  <br><br>
+  <label>Email:</label>
+  <input type="email" placeholder="Enter Ur email" ngModel name="email" >
+  <br><br>
+  <label>Phone:</label>
+  <input type="tel" placeholder="Enter phone number" ngModel name="phoneNo" >
+  <br><br>
+  <label>Country:</label>
+  <select ngModel name="country" >
+    <option value="">Select Country</option>
+    <option value="USA" >USA</option>
+    <option value="UK" >UK</option>
+    <option value="India" >India</option>
+    <option value="China" >China</option>
+  </select>
+  <br><br>
+  <label>Address:</label>
+  <textarea cols="38" rows="5" placeholder=" enter ur Address" ngModel name="address" required></textarea>
+  <br><br>
+  <label>City:</label>
+  <input type="text" required>
+  <br><br>
+  <label>CGPA:</label>
+  <input type="number" step="0.01" min="0" max="10" ngModel name="cgpa" required>
+  <br><br>
+  <label>Skills:</label>
+  <br>
+   <input type="checkbox" value="Html" ngModel name="Html" required>
+   <label for="html">HTML</label><br>
+   <input type="checkbox" value="java" ngModel name="java" required>
+   <label for="java">Java</label><br>
+   <input type="checkbox" value="python" ngModel name="python" required>
+   <label for="python">Python</label><br>
+   <input type="checkbox" value="Angular" ngModel name="Angular" required>
+   <label for="Angular">Angular</label><br>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+</div>
+
+
+<img [src]="'./assets/quote.jpeg'" width="220px" height="330px" alt="quote umg">
+
+<br>
+<br>
+<input type="text" [(ngModel)]="name" >
+<br>
+{{name}}<br>
+<input type="text" placeholder="First Name" #e >
+<button type="submit" value="Submit" (click)="submit(e)">Submit</button>
+<h1>{{e.value}}</h1>
+
+
+<br>
+<br>
+<hr>
+<app-child [message]="parrentMessage"></app-child>
+
+
+
+<button (click)="sendMessage()">click this button</button><br>
+<button (dbclick)="dbMessage()">dblclick</button><br>
+
+<div (mouseover)="mousehoverMessage()">Hover over me</div><br>
+<input (copy)="copyMessage()" placeholder=" copy some text from here"><br>
+

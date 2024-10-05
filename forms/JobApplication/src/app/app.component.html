@@ -1,0 +1,111 @@
+<div class="containerex mt-4 ml-4">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <h3 class="mt-1">Job Registration Form</h3>
+    <label>First Name:</label>
+    <input type="text" placeholder="Enter your first name" ngModel name="firstname" required><br>
+    <label>Last Name:</label>
+    <input type="text" placeholder="Enter your last name" ngModel name="lastname" required><br>
+    <label>Email:</label>
+    <input type="email" placeholder="Enter your email" ngModel name="email" required><br>
+    <label>Present Address:</label>
+    <textarea cols="20" rows="2" ngModel name="paddress" required></textarea><br>
+    <label>Temporary Address:</label>
+    <textarea cols="20" rows="2" ngModel name="taddress" required></textarea><br>
+    <label>Gender:</label>
+    <select ngModel name="gender" required>
+      <option value="">Choose Gender</option>
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <option value="others">Others</option>
+    </select><br>
+    <label>Age:</label>
+    <input type="number" min="18" max="99" ngModel name="age" required><br>
+    <label>Date of Birth:</label>
+    <input type="date" ngModel name="date" required><br>
+    <label>CGPA:</label>
+    <input type="number" min="0" max="4" step="0.01" ngModel name="cgpa" required><br>
+    <label>Skills:</label><br>
+    <ul>
+      <li><label><input type="checkbox" value="Java" ngModel name="skills.java">Java</label></li>
+      <li><label><input type="checkbox" value="Angular" ngModel name="skills.angular">Angular</label></li>
+      <li><label><input type="checkbox" value="Spring Boot" ngModel name="skills.springBoot">Spring Boot</label></li>
+      <li><label><input type="checkbox" value="MongoDB" ngModel name="skills.mongodb">MongoDB</label></li>
+    </ul>
+    <input type="reset" value="Reset" class="ml-5 mr-5 resetbtn"> 
+    <input type="submit" value="Submit" class="ml-5 mr-3 submitbtn">
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+
+
+
+<div class="containerex mt-4 ml-4">
+<form class="form-area">
+  <br>
+  <h3 class="mt-1">Job Registration Form</h3>
+  <br>
+  <label> FirstName:</label>
+  <input type="text" placeholder="Enter your first name"><br>
+  <label> LastName :</label>
+  <input type="text" placeholder="Enter your last name" ><br>
+  <label>Email:     </label>
+  <input type="email" placeholder="Enter your email" ><br>
+  <label>Present Address:</label>
+  <textarea cols="20" rows="2"></textarea><br>
+  <label>Temporary Address:</label>
+  <textarea cols="20" rows="2"></textarea><br>
+  <label>Gender:</label>
+  <select>
+    <option value="">Choose Gender</option>
+    <option value="female">Female</option>
+    <option value="male">Male</option>
+    <option value="others">Others</option>
+  </select><br>
+  <label>Age:</label>
+  <input type="number" min="18" max="99" ><br>
+  <label>Date of Birth:</label>
+  <input type="date" required><br>
+  <label>CGPA:</label>
+  <input type="number" min="0" max="4" step="0.01"><br>
+  <label>Skills:</label><br>
+  <ul>
+      <li><label><input type="checkbox" value="java">Java</label><br></li>
+      <li><label><input type="checkbox" value="angular">Angular</label><br></li>
+      <li><label><input type="checkbox" value="spring boot">Spring Boot</label><br></li>
+      <li><label><input type="checkbox" value="mongodb">Mongodb</label></li>
+  </ul>
+  <br>
+  
+  <input type="reset" value="Reset" class="ml-5 mr-5 resetbtn"> 
+  <input type="submit" value="Submit" class="ml-5 mr-3 submitbtn">
+</form>
+</div>
+
+-->

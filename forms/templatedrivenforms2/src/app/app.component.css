@@ -1,0 +1,16 @@
+.alert{
+    color: red;
+    padding: 1rem 1.5rem; /* Adds space inside the alert */
+  margin-bottom: 1rem;  /* Adds space below the alert */
+  border: 1px solid transparent; /* Transparent border */
+  border-radius: 0.25rem; /* Rounds the corners */
+  background-color: #f8d7da; /* Light red background for danger */
+   /* Dark red text color */
+  border-color: #f5c6cb; /* Light red border */
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+  

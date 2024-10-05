@@ -1,0 +1,16 @@
+.container
+{
+    
+    background-color: rgb(161, 220, 239);
+    margin: 0px 20px 5px 10px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    height:750px;
+    width:420px;
+    outline-style: solid;
+    outline-color: red;
+    outline-width: 1px;
+    
+   
+}

@@ -1,0 +1,38 @@
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark px-2">
+  <div class="container-fluid ">
+    <ul class="navbar-nav ">
+      <li class="nav-item mx-1">
+        <a class="nav-link " href="#" routerLinkActive="active">Active</a>
+      </li>
+     <li class="nav-item mx-3">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">home</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link" routerLink="products" routerLinkActive="active">products</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link" routerLink="contact" routerLinkActive="active">contacts</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+<button type="button" class="btn" routerLink="/contact" routerLinkActive="active">contact</button>
+<button type="button" class="btn" routerLink="/products" routerLinkActive="active">product</button>
+<br>
+
+<h1>{{name|uppercase}}</h1>
+
+<h1>{{name|lowercase}}</h1>
+<h1>{{price|currency}}</h1>
+<h1>{{price|currency:'INR'}}</h1>
+<h1>{{price|number}}</h1>
+
+<!-- Display the data using *ngFor -->
+<ul>
+  <li *ngFor="let post of postServiceData">
+    ID: {{ post.id }} - Name: {{ post.name }} - Age: {{ post.age }}
+  </li>
+</ul>

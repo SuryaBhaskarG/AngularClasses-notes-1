@@ -1,0 +1,57 @@
+<input type="text" placeholder="Enter your name" #f>
+<button type="button" (click)="onSubmit123(f)">Submit</button>
+
+<br>
+<br>
+
+@if(age>18)
+{
+  <h1 style="color:rgb(3, 246, 88)"> he is allowed to vote!</h1>
+}
+@else {
+  <h1 style="color:rgb(246, 3, 3)"> he is not allowed to vote!</h1>
+}
+ 
+@for(x of arr;track x)
+{
+ 
+  <h1>the value i: {{x}}</h1>
+}
+
+@switch(isAdmin)
+{
+  @case('admin')
+  {
+    <h1>i am admin</h1>
+  }
+  @case('user')
+  {
+    <h1>i am user</h1>
+  }
+  @case('tester')
+  {
+    <h1>i am tester</h1>
+  }
+  @default
+  {
+    <h1>not found</h1>
+  }
+
+}
+
+
+
+
+
+<form #f="ngForm" >
+
+  <input type="text" placeholder="Enter your firstname" ><br>
+  <input type="text" placeholder="Enter your lastname" ><br>
+  <input type="email" placeholder="Enter your email" ><br>
+  <input type="number" placeholder="Enter your age" ><br>
+  <textarea type="text" cols="16" rows="5" placeholder="Enter your address here!"></textarea>
+  <br>
+  <input type="tel" placeholder="Enter your pho number" ><br>
+  <button type="reset" >reset</button>
+  <button type="submit" >Submit</button>
+</form>

@@ -1,0 +1,48 @@
+<form #f="ngForm" (submit)="submit(f)">
+  <label><b>User Name:</b></label>
+  <input type="text" ngModel #username='ngModel' name="username"  
+  (change)="getValue(username)" minlength="5" maxlength="12"><br>
+  <label><b>Email:</b></label>
+  <input type="email" ngModel name="email" required><br>
+  <label><b>Age:</b></label>
+  <input type="number" min="19" max="99" ngModel name="age" required><br>
+  <label><b>Address:</b></label>
+  <textarea type="text" ngModel name="adddress" required></textarea><br>
+  <button type="reset">Reset</button>
+  <button type="submit" [disabled]="f.invalid">Submit</button>
+</form>
+
+
+@if(username.invalid && username.touched)
+{ 
+  <div class="alert">
+   user name is required! 
+  </div>
+}
+@if(username.errors?.['minlength'] || username.errors?.['maxlength'])
+{ 
+  <div class="alert">
+   min and max length should be 5 and 12!
+  </div>
+}
+
+  
+
+<br>
+<br>
+<!-- Applying style directly -->
+<div [ngStyle]="{'color': color}">
+  This text color is dynamic!
+</div>
+
+<!-- Changing the color -->
+<button (click)="color = 'red'">Red</button>
+<button (click)="color = 'blue'">Blue</button>
+
+<!-- Applying class based on condition -->
+<div [ngClass]="{ 'highlight': !isHighlighted }">
+  This text is conditionally highlighted!
+</div>
+
+<!-- Toggling the highlight class -->
+<button (click)="isHighlighted = !isHighlighted">Toggle Highlight</button>

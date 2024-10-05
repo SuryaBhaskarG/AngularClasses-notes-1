@@ -1,0 +1,40 @@
+
+<form  #f='ngForm' (submit)="onSubmit(f)">
+
+  <input type="text" placeholder="Enter your firstname"  ngModel  name="firstName" #firstName='ngModel' x ><br>
+  <input type="text" placeholder="Enter your lastname" ngModel  name="lastName" #lastName='ngModel'><br>
+  <input type="email" placeholder="Enter your email" ngModel  name="email" #email='ngModel'><br>
+  <input type="number" placeholder="Enter your age" ngModel  name="age" #age='ngModel'><br>
+  <textarea type="text" cols="16" rows="5" placeholder="Enter your address here!" ngModel  name="address" #address='ngModel'></textarea>
+  <br>
+  <input type="tel" placeholder="Enter your pho number" ngModel  name="phoneno" #phoneno='ngModel'><br>
+  <button type="reset" >reset</button>
+  <button type="submit" >Submit</button>
+</form>
+
+@if(firstName.invalid&&firstName.touched)
+{
+  <p style="color:rgb(235, 10, 10)">First Name is required!</p>
+}
+
+<br>
+<br>
+<div class="container mt-5 px-5">
+<form>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Enter email" name="email">
+    </div>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Enter email" name="email">
+    </div>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+    </div>
+  </div>
+</form></div>
